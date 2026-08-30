@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رشفة - من قلب الطبيعة | Roshfa - From Nature's Heart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>رشفة</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="setLanguage('ar')">العربية</a></li>
+                <li><a href="#home" onclick="setLanguage('en')">English</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#offers">العروض</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="ar-text">رشفة من قلب الطبيعة</h2>
+            <h2 class="en-text">Roshfa - From Nature's Heart</h2>
+            <p class="ar-text">عصائر طازة 100% طبيعية بدون مواد حافظة</p>
+            <p class="en-text">100% Fresh Natural Juices - No Preservatives</p>
+            <button class="cta-btn ar-text" onclick="document.getElementById('products').scrollIntoView()">تصفح المنتجات</button>
+            <button class="cta-btn en-text" onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500&h=500&fit=crop" alt="Fresh Juices">
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <h2 class="ar-text">🎉 العروض المميزة</h2>
+            <h2 class="en-text">🎉 Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card offer-1">
+                    <h3 class="ar-text">اشتري 3 واحصل على واحد مجاني</h3>
+                    <h3 class="en-text">Buy 3 Get 1 Free</h3>
+                    <p class="ar-text">على جميع العصائر الطبيعية</p>
+                    <p class="en-text">On All Natural Juices</p>
+                    <span class="discount-badge">-25%</span>
+                </div>
+                <div class="offer-card offer-2">
+                    <h3 class="ar-text">عرض العائلة الكبيرة</h3>
+                    <h3 class="en-text">Family Bundle</h3>
+                    <p class="ar-text">6 عصائر مختلفة ب 120 ريال فقط</p>
+                    <p class="en-text">6 Different Juices for 120 SAR</p>
+                    <span class="discount-badge">-30%</span>
+                </div>
+                <div class="offer-card offer-3">
+                    <h3 class="ar-text">توصيل مجاني</h3>
+                    <h3 class="en-text">Free Delivery</h3>
+                    <p class="ar-text">على الطلبات أكثر من 150 ريال</p>
+                    <p class="en-text">Orders Over 150 SAR</p>
+                    <span class="discount-badge">FREE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="ar-text">🥤 المنتجات</h2>
+            <h2 class="en-text">🥤 Our Products</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')">الكل</button>
+                <button class="filter-btn" onclick="filterProducts('citrus')">حمضيات</button>
+                <button class="filter-btn" onclick="filterProducts('tropical')">استوائية</button>
+                <button class="filter-btn" onclick="filterProducts('berries')">التوت</button>
+                <button class="filter-btn" onclick="filterProducts('green')">أخضر</button>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="ar-text">📍 تواصل معنا</h2>
+            <h2 class="en-text">📍 Contact Us</h2>
+            
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3 class="ar-text">العنوان</h3>
+                    <h3 class="en-text">Address</h3>
+                    <p class="ar-text">شيخ زايد، شارع 24، كومباوند النخيل</p>
+                    <p class="en-text">Sheikh Zayed, Street 24, Al Nakheel Compound</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3 class="ar-text">الهاتف</h3>
+                    <h3 class="en-text">Phone</h3>
+                    <p><a href="tel:+201010448334">+201010448334</a></p>
+                </div>
+                <div class="info-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3 class="ar-text">واتس اب</h3>
+                    <h3 class="en-text">WhatsApp</h3>
+                    <p><a href="https://wa.me/201010448334" target="_blank">اطلب الآن | Order Now</a></p>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h3 class="ar-text">نموذج الطلب السريع</h3>
+                <h3 class="en-text">Quick Order Form</h3>
+                <form id="order-form">
+                    <input type="text" placeholder="الاسم / Name" required>
+                    <input type="email" placeholder="البريد / Email" required>
+                    <input type="tel" placeholder="الهاتف / Phone" required>
+                    <textarea placeholder="رسالتك / Your Message" rows="4" required></textarea>
+                    <button type="submit" class="submit-btn">إرسال / Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2 class="ar-text">سلة التسوق</h2>
+            <h2 class="en-text">Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3 class="ar-text">المجموع: <span id="total-price">0</span> ريال</h3>
+                <h3 class="en-text">Total: <span id="total-price-en">0</span> SAR</h3>
+            </div>
+            <button class="order-btn" onclick="orderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+                <span class="ar-text">اطلب عبر واتس</span>
+                <span class="en-text">Order via WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="ar-text">عن رشفة</h3>
+                    <h3 class="en-text">About Roshfa</h3>
+                    <p class="ar-text">متجر عصائر طبيعية متخصص في تقديم أفضل العصائر الطازة</p>
+                    <p class="en-text">Specialized natural juice store offering the best fresh juices</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="ar-text">روابط سريعة</h3>
+                    <h3 class="en-text">Quick Links</h3>
+                    <ul>
+                        <li><a href="#products">المنتجات / Products</a></li>
+                        <li><a href="#offers">العروض / Offers</a></li>
+                        <li><a href="#contact">اتصل بنا / Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="ar-text">تابعنا</h3>
+                    <h3 class="en-text">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="ar-text">&copy; 2024 رشفة - من قلب الطبيعة. جميع الحقوق محفوظة.</p>
+                <p class="en-text">&copy; 2024 Roshfa - From Nature's Heart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
