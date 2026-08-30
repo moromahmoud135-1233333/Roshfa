@@ -1,13 +1,108 @@
 // ========== Products Database ==========
 const products = [
-    { id: 1, name: 'عصير البرتقال', enName: 'Orange Juice', price: 25, category: 'citrus', emoji: '🍊', description: 'طازة 100%' },
-    { id: 2, name: 'عصير الليمون', enName: 'Lemon Juice', price: 20, category: 'citrus', emoji: '🍋', description: 'منعش وطازة' },
-    { id: 3, name: 'عصير المانجو', enName: 'Mango Juice', price: 30, category: 'tropical', emoji: '🥭', description: 'استوائي شهي' },
-    { id: 4, name: 'عصير الأناناس', enName: 'Pineapple Juice', price: 28, category: 'tropical', emoji: '🍍', description: 'حلو وتروبيكالي' },
-    { id: 5, name: 'عصير الفراولة', enName: 'Strawberry Juice', price: 32, category: 'berries', emoji: '🍓', description: 'حمضي وحلو' },
-    { id: 6, name: 'عصير التوت', enName: 'Berry Mix', price: 35, category: 'berries', emoji: '🫐', description: 'مزيج التوت الطازة' },
-    { id: 7, name: 'عصير أخضر', enName: 'Green Juice', price: 40, category: 'green', emoji: '💚', description: 'صحي وطبيعي' },
-    { id: 8, name: 'عصير السبانخ والتفاح', enName: 'Spinach Apple', price: 38, category: 'green', emoji: '🥗', description: 'غني بالفيتامينات' },
+    // ========== Citrus Juices ==========
+    { id: 1, name: 'عصير البرتقال الطازة', enName: 'Fresh Orange Juice', price: 15, category: 'citrus', emoji: '🍊', description: 'برتقال طازة 100%' },
+    { id: 2, name: 'عصير الليمون الحامض', enName: 'Lemon Juice', price: 12, category: 'citrus', emoji: '🍋', description: 'منعش وطازة جداً' },
+    { id: 3, name: 'عصير الجريب فروت', enName: 'Grapefruit Juice', price: 18, category: 'citrus', emoji: '🍊', description: 'حمضي وصحي' },
+    { id: 4, name: 'عصير البرتقال والليمون', enName: 'Orange Lemon Mix', price: 16, category: 'citrus', emoji: '🍋', description: 'مزيج منعش' },
+    { id: 5, name: 'عصير اليوسفي', enName: 'Tangerine Juice', price: 14, category: 'citrus', emoji: '🍊', description: 'حلو وطازة' },
+    { id: 6, name: 'عصير الكيوي والليمون', enName: 'Kiwi Lemon', price: 20, category: 'citrus', emoji: '🥝', description: 'مزيج استثنائي' },
+    { id: 7, name: 'عصير الجزر والبرتقال', enName: 'Carrot Orange', price: 17, category: 'citrus', emoji: '🥕', description: 'غني بالفيتامينات' },
+    { id: 8, name: 'عصير الليمون بالنعناع', enName: 'Mint Lemon', price: 14, category: 'citrus', emoji: '🍋', description: 'منعش وبارد' },
+
+    // ========== Tropical Juices ==========
+    { id: 9, name: 'عصير المانجو الملكي', enName: 'Royal Mango Juice', price: 22, category: 'tropical', emoji: '🥭', description: 'ألذ مانجو' },
+    { id: 10, name: 'عصير الأناناس الحلو', enName: 'Sweet Pineapple', price: 20, category: 'tropical', emoji: '🍍', description: 'استوائي شهي' },
+    { id: 11, name: 'عصير جوز الهند', enName: 'Coconut Juice', price: 25, category: 'tropical', emoji: '🥥', description: 'بارد ومنعش' },
+    { id: 12, name: 'عصير المانجو والأناناس', enName: 'Mango Pineapple', price: 24, category: 'tropical', emoji: '🥭', description: 'مزيج استوائي' },
+    { id: 13, name: 'عصير الجوافة', enName: 'Guava Juice', price: 18, category: 'tropical', emoji: '🍓', description: 'غني بالفيتامين ج' },
+    { id: 14, name: 'عصير الشمام', enName: 'Cantaloupe Juice', price: 16, category: 'tropical', emoji: '🍈', description: 'حلو وطازة' },
+    { id: 15, name: 'عصير البابايا', enName: 'Papaya Juice', price: 21, category: 'tropical', emoji: '🍑', description: 'صحي وحلو' },
+    { id: 16, name: 'عصير التمر الهندي', enName: 'Tamarind Juice', price: 19, category: 'tropical', emoji: '🍶', description: 'حامض ولذيذ' },
+    { id: 17, name: 'عصير الرمان والمانجو', enName: 'Pomegranate Mango', price: 26, category: 'tropical', emoji: '🥭', description: 'فاخر وغني' },
+    { id: 18, name: 'عصير الكاكاو الاستوائي', enName: 'Tropical Cacao', price: 23, category: 'tropical', emoji: '🍫', description: 'حلو ولذيذ' },
+
+    // ========== Berry Juices ==========
+    { id: 19, name: 'عصير الفراولة', enName: 'Strawberry Juice', price: 20, category: 'berries', emoji: '🍓', description: 'حلو وحامض' },
+    { id: 20, name: 'عصير التوت الأسود', enName: 'Blackberry Juice', price: 22, category: 'berries', emoji: '🫐', description: 'غني بالمضادات' },
+    { id: 21, name: 'عصير التوت الأحمر', enName: 'Raspberry Juice', price: 21, category: 'berries', emoji: '🍓', description: 'لذيذ وصحي' },
+    { id: 22, name: 'عصير التوت المختلط', enName: 'Mixed Berries', price: 24, category: 'berries', emoji: '🫐', description: 'مزيج التوت الفاخر' },
+    { id: 23, name: 'عصير الفراولة والكريمة', enName: 'Strawberry Cream', price: 25, category: 'berries', emoji: '🍓', description: 'فاخر وحلو' },
+    { id: 24, name: 'عصير العنب البري', enName: 'Blueberry Juice', price: 23, category: 'berries', emoji: '🫐', description: 'صحي ولذيذ' },
+    { id: 25, name: 'عصير الفراولة والليمون', enName: 'Strawberry Lemon', price: 19, category: 'berries', emoji: '🍓', description: 'منعش وحلو' },
+    { id: 26, name: 'عصير التوت والرمان', enName: 'Berry Pomegranate', price: 26, category: 'berries', emoji: '🫐', description: 'فاخر وغني' },
+
+    // ========== Green & Healthy Juices ==========
+    { id: 27, name: 'عصير أخضر صحي', enName: 'Healthy Green Juice', price: 28, category: 'green', emoji: '💚', description: 'صحي وطازة' },
+    { id: 28, name: 'عصير السبانخ والتفاح', enName: 'Spinach Apple', price: 26, category: 'green', emoji: '🥗', description: 'غني بالفيتامينات' },
+    { id: 29, name: 'عصير الكرفس والتفاح', enName: 'Celery Apple Juice', price: 27, category: 'green', emoji: '🥬', description: 'تطهير وصحة' },
+    { id: 30, name: 'عصير الكيوي والأناناس', enName: 'Kiwi Pineapple', price: 25, category: 'green', emoji: '🥝', description: 'أخضر وحلو' },
+    { id: 31, name: 'عصير الخيار والليمون', enName: 'Cucumber Lemon', price: 18, category: 'green', emoji: '🥒', description: 'منعش وصحي' },
+    { id: 32, name: 'عصير الزنجبيل والعسل', enName: 'Ginger Honey', price: 24, category: 'green', emoji: '🍯', description: 'دافئ وصحي' },
+    { id: 33, name: 'عصير الشاي الأخضر', enName: 'Green Tea Juice', price: 22, category: 'green', emoji: '🍵', description: 'صحي ومنعش' },
+    { id: 34, name: 'عصير الأفوكادو والعسل', enName: 'Avocado Honey', price: 30, category: 'green', emoji: '🥑', description: 'فاخر وغني' },
+
+    // ========== Coffee - القهوة ==========
+    { id: 35, name: 'قهوة اسبريسو', enName: 'Espresso Coffee', price: 18, category: 'coffee', emoji: '☕', description: 'قوية ومركزة' },
+    { id: 36, name: 'لاتيه كلاسيكي', enName: 'Classic Latte', price: 22, category: 'coffee', emoji: '☕', description: 'حليب وقهوة' },
+    { id: 37, name: 'كابتشينو فاخر', enName: 'Premium Cappuccino', price: 24, category: 'coffee', emoji: '☕', description: 'رغوة كريمية' },
+    { id: 38, name: 'موكا شوكولاتة', enName: 'Chocolate Mocha', price: 26, category: 'coffee', emoji: '☕', description: 'قهوة وشوكولاتة' },
+    { id: 39, name: 'لاتيه الكراميل', enName: 'Caramel Latte', price: 25, category: 'coffee', emoji: '☕', description: 'حلو ولذيذ' },
+    { id: 40, name: 'قهوة الفانيليا', enName: 'Vanilla Coffee', price: 23, category: 'coffee', emoji: '☕', description: 'عطرية وحلوة' },
+    { id: 41, name: 'أيس لاتيه', enName: 'Iced Latte', price: 24, category: 'coffee', emoji: '🧊', description: 'بارد ومنعش' },
+    { id: 42, name: 'أيس موكا', enName: 'Iced Mocha', price: 27, category: 'coffee', emoji: '🧊', description: 'قهوة شوكولاتة باردة' },
+    { id: 43, name: 'أيس كابتشينو', enName: 'Iced Cappuccino', price: 26, category: 'coffee', emoji: '🧊', description: 'رائع وبارد' },
+    { id: 44, name: 'كوفي ماتشا', enName: 'Matcha Coffee', price: 28, category: 'coffee', emoji: '☕', description: 'مزيج متميز' },
+    { id: 45, name: 'قهوة الفستق', enName: 'Pistachio Coffee', price: 25, category: 'coffee', emoji: '☕', description: 'نكهة فريدة' },
+    { id: 46, name: 'أيس أفوجاتو', enName: 'Affogato Ice Cream', price: 28, category: 'coffee', emoji: '🍦', description: 'قهوة بآيسكريم' },
+
+    // ========== Hot Drinks - المشروبات الساخنة ==========
+    { id: 47, name: 'شاي أسود كلاسيكي', enName: 'Black Tea', price: 16, category: 'hot', emoji: '🍵', description: 'شاي طازة' },
+    { id: 48, name: 'شاي أخضر صحي', enName: 'Green Tea', price: 18, category: 'hot', emoji: '🍵', description: 'صحي ومنعش' },
+    { id: 49, name: 'شاي بالنعناع', enName: 'Mint Tea', price: 17, category: 'hot', emoji: '🍵', description: 'منعش وهادي' },
+    { id: 50, name: 'شاي الجنجبيل والعسل', enName: 'Ginger Honey Tea', price: 19, category: 'hot', emoji: '🍵', description: 'دافئ وصحي' },
+    { id: 51, name: 'شاي الليمون والعسل', enName: 'Lemon Honey Tea', price: 18, category: 'hot', emoji: '🍵', description: 'مهدئ ولذيذ' },
+    { id: 52, name: 'شاي الزهور', enName: 'Flower Tea', price: 20, category: 'hot', emoji: '🍵', description: 'عطري وجميل' },
+    { id: 53, name: 'شاي البابونج', enName: 'Chamomile Tea', price: 17, category: 'hot', emoji: '🍵', description: 'مهدئ للأعصاب' },
+    { id: 54, name: 'شاي الكركم والعسل', enName: 'Turmeric Honey Tea', price: 22, category: 'hot', emoji: '🍵', description: 'مضاد التهاب' },
+    { id: 55, name: 'شاي ركاي', enName: 'Rosehip Tea', price: 19, category: 'hot', emoji: '🍵', description: 'غني بفيتامين ج' },
+    { id: 56, name: 'شاي الرمان', enName: 'Pomegranate Tea', price: 21, category: 'hot', emoji: '🍵', description: 'فاخر وصحي' },
+    { id: 57, name: 'كوكو ساخن', enName: 'Hot Chocolate', price: 24, category: 'hot', emoji: '☕', description: 'دافئ وحلو' },
+    { id: 58, name: 'كوكو بالقرفة', enName: 'Cinnamon Hot Chocolate', price: 26, category: 'hot', emoji: '☕', description: 'عطري وفاخر' },
+
+    // ========== Smoothies & Milkshakes ==========
+    { id: 59, name: 'سموثي الفراولة', enName: 'Strawberry Smoothie', price: 25, category: 'smoothie', emoji: '🍓', description: 'كريمي وحلو' },
+    { id: 60, name: 'سموثي المانجو', enName: 'Mango Smoothie', price: 27, category: 'smoothie', emoji: '🥭', description: 'سميك وشهي' },
+    { id: 61, name: 'سموثي التوت', enName: 'Berry Smoothie', price: 28, category: 'smoothie', emoji: '🫐', description: 'غني بالفيتامينات' },
+    { id: 62, name: 'سموثي الموز والعسل', enName: 'Banana Honey Smoothie', price: 24, category: 'smoothie', emoji: '🍌', description: 'طاقة وصحة' },
+    { id: 63, name: 'سموثي الأفوكادو', enName: 'Avocado Smoothie', price: 30, category: 'smoothie', emoji: '🥑', description: 'فاخر وكريمي' },
+    { id: 64, name: 'ميلك شيك الفانيليا', enName: 'Vanilla Milkshake', price: 26, category: 'smoothie', emoji: '🥛', description: 'كلاسيكي ولذيذ' },
+    { id: 65, name: 'ميلك شيك الشوكولاتة', enName: 'Chocolate Milkshake', price: 27, category: 'smoothie', emoji: '🍫', description: 'حلو جداً' },
+    { id: 66, name: 'ميلك شيك الفراولة', enName: 'Strawberry Milkshake', price: 27, category: 'smoothie', emoji: '🍓', description: 'طازة ولذيذة' },
+    { id: 67, name: 'سموثي الأناناس والجوز', enName: 'Pineapple Coconut', price: 28, category: 'smoothie', emoji: '🍍', description: 'استوائي رائع' },
+    { id: 68, name: 'سموثي الكيوي والجوافة', enName: 'Kiwi Guava', price: 26, category: 'smoothie', emoji: '🥝', description: 'حامض وحلو' },
+
+    // ========== Fresh Lemonade & Drinks ==========
+    { id: 69, name: 'عصير ليمون بارد', enName: 'Cold Lemonade', price: 15, category: 'lemonade', emoji: '🍋', description: 'منعش جداً' },
+    { id: 70, name: 'ليمون بالنعناع', enName: 'Lemon Mint', price: 17, category: 'lemonade', emoji: '🍋', description: 'منعش وبارد' },
+    { id: 71, name: 'ليمون بالعسل', enName: 'Lemon Honey', price: 18, category: 'lemonade', emoji: '🍋', description: 'حلو ومنعش' },
+    { id: 72, name: 'ليمون بالزنجبيل', enName: 'Lemon Ginger', price: 19, category: 'lemonade', emoji: '🍋', description: 'حار ومنعش' },
+    { id: 73, name: 'ليمون بالكركم', enName: 'Lemon Turmeric', price: 20, category: 'lemonade', emoji: '🍋', description: 'صحي ومنعش' },
+    { id: 74, name: 'عصير الليمون المركز', enName: 'Fresh Lemon Juice', price: 16, category: 'lemonade', emoji: '🍋', description: 'طازة 100%' },
+    { id: 75, name: 'شربة برتقال وليمون', enName: 'Orange Lemon Mix', price: 17, category: 'lemonade', emoji: '🍊', description: 'مزيج متوازن' },
+    { id: 76, name: 'شربة الرمان والليمون', enName: 'Pomegranate Lemon', price: 22, category: 'lemonade', emoji: '🍋', description: 'فاخر ومنعش' },
+
+    // ========== Special & Premium ==========
+    { id: 77, name: 'عصير الرمان الفاخر', enName: 'Premium Pomegranate', price: 28, category: 'premium', emoji: '🍎', description: 'جودة عالية' },
+    { id: 78, name: 'عصير العنب الأحمر', enName: 'Red Grapes Juice', price: 26, category: 'premium', emoji: '🍇', description: 'فاخر وغني' },
+    { id: 79, name: 'عصير التوت والرمان', enName: 'Berry Pomegranate', price: 30, category: 'premium', emoji: '🫐', description: 'فاخر جداً' },
+    { id: 80, name: 'عصير الجزر والزنجبيل', enName: 'Carrot Ginger', price: 22, category: 'premium', emoji: '🥕', description: 'صحي وقوي' },
+    { id: 81, name: 'عصير الخضار المختلط', enName: 'Mixed Vegetable', price: 27, category: 'premium', emoji: '🥬', description: 'صحي 100%' },
+    { id: 82, name: 'عصير الشمندر والجزر', enName: 'Beetroot Carrot', price: 25, category: 'premium', emoji: '🥕', description: 'صحي وقوي' },
+    { id: 83, name: 'عصير الأناناس والزنجبيل', enName: 'Pineapple Ginger', price: 24, category: 'premium', emoji: '🍍', description: 'منعش وقوي' },
+    { id: 84, name: 'عصير الجوافة والعنب', enName: 'Guava Grape', price: 26, category: 'premium', emoji: '🍇', description: 'حلو وصحي' },
+    { id: 85, name: 'عصير التمر والحليب', enName: 'Date Milk Juice', price: 28, category: 'premium', emoji: '🥛', description: 'طاقة عالية' },
+    { id: 86, name: 'عصير المكسرات والعسل', enName: 'Nuts Honey Juice', price: 32, category: 'premium', emoji: '🥜', description: 'فاخر وغني' },
 ];
 
 let cart = [];
@@ -39,7 +134,7 @@ function loadProducts(category) {
                 <h3 class="en-text">${product.enName}</h3>
                 <p class="ar-text">${product.description}</p>
                 <p class="en-text">${product.description}</p>
-                <div class="product-price">${product.price} ريال</div>
+                <div class="product-price">${product.price} ج.م</div>
                 <button class="add-to-cart" onclick="addToCart(${product.id}, '${product.name}', '${product.enName}', ${product.price})">
                     <span class="ar-text">أضف للسلة</span>
                     <span class="en-text">Add to Cart</span>
@@ -49,17 +144,12 @@ function loadProducts(category) {
         productsGrid.appendChild(productCard);
     });
 
-    // Update filter buttons
     updateFilterButtons(category);
 }
 
 // ========== Filter Products ==========
 function filterProducts(category) {
     loadProducts(category);
-}
-
-// ========== Update Filter Buttons ==========
-function updateFilterButtons(active) {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
     });
@@ -105,7 +195,7 @@ function displayCartItems() {
             <div class="cart-item-info">
                 <span class="ar-text">${item.name}</span>
                 <span class="en-text">${item.enName}</span>
-                <span>${item.price} ريال</span>
+                <span>${item.price} ج.م</span>
             </div>
             <button class="remove-btn" onclick="removeFromCart(${index})">✕</button>
         `;
@@ -128,16 +218,17 @@ function orderViaWhatsApp() {
         return;
     }
 
-    let message = currentLanguage === 'ar' ? 'طلبي:\n' : 'My Order:\n';
+    let message = currentLanguage === 'ar' ? 'مرحباً، طلبي من رشفة:\n\n' : 'Hello, my order from Roshfa:\n\n';
     let total = 0;
 
     cart.forEach(item => {
         const itemName = currentLanguage === 'ar' ? item.name : item.enName;
-        message += `• ${itemName} - ${item.price} ريال\n`;
+        message += `• ${itemName} - ${item.price} ج.م\n`;
         total += item.price;
     });
 
-    message += `\nالمجموع: ${total} ريال`;
+    message += `\n---\n`;
+    message += currentLanguage === 'ar' ? `المجموع: ${total} ج.م\n\nشكراً! 🙏` : `Total: ${total} EGP\n\nThank you! 🙏`;
 
     const whatsappLink = `https://wa.me/201010448334?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, '_blank');
@@ -206,170 +297,3 @@ window.addEventListener('click', (e) => {
         closeCart();
     }
 });
-
-// ========== Add CSS for animations ==========
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    .cart-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-
-    .cart-item-info {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .remove-btn {
-        background-color: #e74c3c;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    .remove-btn:hover {
-        background-color: #c0392b;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-content {
-        background-color: white;
-        margin: 5% auto;
-        padding: 30px;
-        border-radius: 15px;
-        width: 90%;
-        max-width: 500px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .close {
-        color: #aaa;
-        float: left;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .close:hover {
-        color: #000;
-    }
-
-    .order-btn {
-        background-color: #25d366;
-        color: white;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        font-size: 16px;
-    }
-
-    .order-btn:hover {
-        background-color: #20ba5a;
-    }
-
-    .order-form {
-        background-color: #f5f5f5;
-        padding: 30px;
-        border-radius: 15px;
-        margin-top: 30px;
-    }
-
-    .order-form input,
-    .order-form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        font-family: inherit;
-    }
-
-    .order-form input:focus,
-    .order-form textarea:focus {
-        outline: none;
-        border-color: #27ae60;
-    }
-
-    .submit-btn {
-        background-color: #27ae60;
-        color: white;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .submit-btn:hover {
-        background-color: #229954;
-    }
-
-    .filter-btn {
-        background-color: #f5f5f5;
-        color: #333;
-        padding: 10px 20px;
-        border: 2px solid #ddd;
-        border-radius: 25px;
-        cursor: pointer;
-        margin: 0 5px 15px 5px;
-        transition: all 0.3s ease;
-    }
-
-    .filter-btn.active {
-        background-color: #27ae60;
-        color: white;
-        border-color: #27ae60;
-    }
-
-    .filter-btn:hover {
-        border-color: #27ae60;
-    }
-
-    .filter-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-`;
-document.head.appendChild(style);
